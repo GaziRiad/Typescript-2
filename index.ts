@@ -36,7 +36,22 @@ let hobbies: string[]; //number[], boolean[]
 
 hobbies = ["Sports", "Cooking", "Reading"];
 
-function add(a: number, b: number): void {
+// function add(a: number, b: number): void {
+//   const result = a + b;
+//   console.log(result);
+// }
+
+function add(a: number, b: number) {
   const result = a + b;
-  console.log(result);
+  return result;
 }
+
+function calculate(
+  a: number,
+  b: number,
+  calcFn: (a: number, b: number) => number
+) {
+  calcFn(a, b);
+}
+
+calculate(2, 3, add);
