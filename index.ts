@@ -35,3 +35,8 @@ let hobbies: string[]; //number[], boolean[]
 //{name: string; age: number}[]
 
 hobbies = ["Sports", "Cooking", "Reading"];
+
+function add(a: number, b: number): void {
+  const result = a + b;
+  console.log(result);
+}
