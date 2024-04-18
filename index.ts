@@ -29,3 +29,9 @@ user = {
   age: 22,
   isAdmin: true,
 };
+
+// let hobbies: Array<string>;
+let hobbies: string[]; //number[], boolean[]
+//{name: string; age: number}[]
+
+hobbies = ["Sports", "Cooking", "Reading"];
