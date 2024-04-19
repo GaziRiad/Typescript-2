@@ -83,3 +83,33 @@ creds = {
   username: "Riad Hallouch",
   password: "let'sdoit",
 };
+
+// type Admin = {
+//   permissions: string[];
+// };
+
+// type AppUser = {
+//   userName: string;
+// };
+
+// type AppAdmin = Admin & AppUser;
+
+// let admin: AppAdmin = {
+//   permissions: ["login"],
+//   userName: "Riad",
+// };
+
+interface Admin {
+  permissions: string[];
+}
+
+interface AppUser {
+  userName: string;
+}
+
+interface AppAdmin extends Admin, AppUser {}
+
+const admin: AppAdmin = {
+  permissions: ["true"],
+  userName: "Riad Hallouch",
+};
