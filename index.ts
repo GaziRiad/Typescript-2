@@ -113,3 +113,10 @@ const admin: AppAdmin = {
   permissions: ["true"],
   userName: "Riad Hallouch",
 };
+
+let role: "admin" | "user" | "editor"; //admin, user, editor
+
+role = "admin";
+
+// type Role = "admin" | "user" | "editor";
+// let role: Role = "admin";
