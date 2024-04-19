@@ -74,6 +74,10 @@ interface Credentials {
 
 let creds: Credentials;
 
+// interface Credentials {
+//   isAdmin: boolean;
+// }
+
 creds = {
   email: "riadhallouch447@gmail.com",
   username: "Riad Hallouch",
