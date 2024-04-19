@@ -123,3 +123,30 @@ function performAction(action: string | number, role: Role) {
   if (role !== "admin" && typeof action !== "string") return;
   // ...
 }
+
+let roles: Array<Role>;
+
+type DataStorage<T> = {
+  storage: T[];
+  add: (data: T[]) => void;
+};
+
+let textStorage: DataStorage<string> = {
+  storage: ["me"],
+  add: (textArr: string[]) => {
+    textArr.forEach((el) => console.log(el));
+  },
+};
+
+let userStorage: DataStorage<User> = {
+  storage: [{ age: 22, name: "Gazi", id: 12010, isAdmin: true }],
+  add: (users: User[]) => {
+    users.forEach((user) => console.log(user.name));
+  },
+};
+
+function merge<T, U>(a: T, b: U) {
+  return { ...a, ...b };
+}
+
+const newUser = merge({ name: "Riad Hallouch" }, { age: 22 });
