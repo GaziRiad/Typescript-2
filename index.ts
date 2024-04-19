@@ -16,12 +16,14 @@ userId = 123;
 // let user: object;
 // user = "Max";
 
-let user: {
+type User = {
   id: string | number;
   name: string;
   age: number;
   isAdmin: boolean;
 };
+
+let user: User;
 
 user = {
   id: "Abc1",
@@ -55,3 +57,11 @@ function calculate(
 }
 
 calculate(2, 3, add);
+
+// Custom types
+
+type AddFn = (a: number, b: number) => number;
+
+function calculater(a: number, b: number, calcFn: AddFn) {
+  calcFn(a, b);
+}
