@@ -65,3 +65,17 @@ type AddFn = (a: number, b: number) => number;
 function calculater(a: number, b: number, calcFn: AddFn) {
   calcFn(a, b);
 }
+
+interface Credentials {
+  password: string | number;
+  email: string;
+  username: string;
+}
+
+let creds: Credentials;
+
+creds = {
+  email: "riadhallouch447@gmail.com",
+  username: "Riad Hallouch",
+  password: "let'sdoit",
+};
