@@ -114,9 +114,12 @@ const admin: AppAdmin = {
   userName: "Riad Hallouch",
 };
 
-let role: "admin" | "user" | "editor"; //admin, user, editor
+type Role = "admin" | "user" | "editor";
+let role: Role; //admin, user, editor
 
 role = "admin";
 
-// type Role = "admin" | "user" | "editor";
-// let role: Role = "admin";
+function performAction(action: string | number, role: Role) {
+  if (role !== "admin" && typeof action !== "string") return;
+  // ...
+}
